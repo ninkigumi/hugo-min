@@ -2,7 +2,7 @@ FROM alpine:3.4
 MAINTAINER Teruyuki Kobayashi <koba1014@gmail.com>
 
 ENV HUGO_VERSION 0.16
-ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux_amd64
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-amd64
 
 RUN apk update && apk add py-pygments && rm -rf /var/cache/apk/*
 
