@@ -11,3 +11,4 @@ ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINA
 
 RUN  tar -xvzf /tmp/${HUGO_BINARY}.tgz -C /tmp/ \
 	&& mv /tmp/hugo /usr/bin/hugo && rm -rf /tmp/*
+
