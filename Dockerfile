@@ -11,4 +11,4 @@ RUN apk update && apk add py-pygments && rm -rf /var/cache/apk/*
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tgz /tmp/
 
 RUN  tar -xvzf /tmp/${HUGO_BINARY}.tgz -C /tmp/ \
-	&& mv /tmp/${HUGO_BINARY}/${HUGO_BINARY} /usr/bin/hugo && rm -rf /tmp/hugo*
+	&& mv /tmp/${HUGO_BINARY}/hugo /usr/bin/hugo && rm -rf /tmp/hugo*
