@@ -10,4 +10,4 @@ ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINA
 
 # RUN tar -xvzf /tmp/${HUGO_BINARY}.tar.gz -C /tmp/ && mv /tmp/hugo /usr/bin/hugo && rm -rf /tmp/*
 
-# RUN tar -xvzf /tmp/${HUGO_BINARY}.tar.gz -C /tmp/ && mv /tmp/hugo_${HUGO_VERSION}_linux_amd64/hugo_${HUGO_VERSION}_linux_amd64 /usr/bin/hugo && rm -rf /tmp/*
+RUN tar -xvzf /tmp/${HUGO_BINARY}.tar.gz -C /tmp/ && mv /tmp/hugo_${HUGO_VERSION}_linux_amd64/hugo_${HUGO_VERSION}_linux_amd64 /usr/bin/hugo && rm -rf /tmp/*
