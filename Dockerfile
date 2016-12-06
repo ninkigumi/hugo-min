@@ -12,7 +12,7 @@ RUN apk update && apk upgrade &&  \
     npm i html-minifier -g && \
     npm cache clean && \
     apk del .build-deps && \
-    apk add --no-cache py-pygments git bash openssh-client
+    apk add --no-cache py-pygments git bash openssh-client curl
 
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tgz /tmp/
 
