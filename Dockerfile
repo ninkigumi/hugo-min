@@ -16,4 +16,4 @@ RUN apk update && apk upgrade &&  \
 
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /tmp/
 
-RUN tar -xvzf /tmp/${HUGO_BINARY}.tgz -C /tmp/ && mv /tmp/hugo /usr/bin/hugo && rm -rf /tmp/*
+RUN tar -xvzf /tmp/${HUGO_BINARY}.tar.gz -C /tmp/ && mv /tmp/hugo /usr/bin/hugo && rm -rf /tmp/*
