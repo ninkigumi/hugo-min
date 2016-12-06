@@ -5,7 +5,7 @@ WORKDIR /src
 ADD . .
 
 ENV HUGO_VERSION 0.17
-ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit
 
 RUN apk update && apk upgrade &&  \
     apk add --no-cache --virtual .build-deps make gcc g++ python && \
@@ -14,6 +14,6 @@ RUN apk update && apk upgrade &&  \
     apk del .build-deps && \
     apk add --no-cache py-pygments git bash openssh-client curl
 
-ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tgz /tmp/
+ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /tmp/
 
 RUN tar -xvzf /tmp/${HUGO_BINARY}.tgz -C /tmp/ && mv /tmp/hugo /usr/bin/hugo && rm -rf /tmp/*
